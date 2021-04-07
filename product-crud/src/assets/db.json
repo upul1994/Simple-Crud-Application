@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "pen",
+      "price": 45
+    },
+    {
+      "id": 2,
+      "productName": "pencil",
+      "price": 20
+    },
+    {
+      "id": 3,
+      "productName": "shoes",
+      "price": 1200
+    },
+    {
+      "id": 4,
+      "productName": "coffee",
+      "price": 45
+    },
+    {
+      "id": 5,
+      "productName": "cup",
+      "price": 225
+    },
+    {
+      "id": 6,
+      "productName": "shirt",
+      "price": 1500
+    },
+    {
+      "id": 7,
+      "productName": "table",
+      "price": 2400
+    },
+    {
+      "id": 8,
+      "productName": "bottle",
+      "price": 350
+    }
+  ]
+}

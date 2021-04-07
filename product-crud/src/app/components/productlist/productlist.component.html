@@ -1,0 +1,53 @@
+<div class="container mt-4">
+<div class="row">
+
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+
+
+    <h5 class="text-center text-danger"><u>Products Details</u></h5>
+
+    <br>
+
+    <div class="alert alert-success" *ngIf="msg">
+      This product deleted successful
+    </div>
+
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>ProductID</th>
+        <th>ProductName</th>
+        <th>Price</th>
+        <th>Action</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let products of productList" >
+        <td>{{products.id}}</td>
+        <td>{{products.productName}}</td>
+        <td>{{products.price}}</td>
+        <td>
+          <a href="/edit/{{products.id}}" ><button class="btn btn-success mr-2">Edit</button></a>
+          <button (click)="deleteProduct(products.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+
+      </tbody>
+
+
+    </table>
+
+  </div>
+  <div class="col-md-1"></div>
+
+
+
+</div>
+</div>
+
+
+

@@ -1,0 +1,73 @@
+
+<div class="container mt-3">
+
+<div class="row">
+
+  <div class="col-md-2">
+
+
+  </div>
+
+
+  <div class="col-md-8">
+
+  <h5>Add New Product</h5>
+
+    <!--  Template Driven Form-->
+
+    <form #addproduct="ngForm" class="form-group" (ngSubmit)="addNew(addproduct)"  >
+
+      <div class="alert alert-success" *ngIf="msg">
+        Product Added Successfully
+      </div>
+
+      <br>
+      <div class="form-group">
+        <label for="exampleInputId">ProductID :</label>
+        <input type="number" class="form-control" id="exampleInputId" name="pid" placeholder=" product Id" required  #name1='ngModel' ngModel>
+
+        <div class="alert alert-danger" *ngIf="!name1.valid">
+          <span *ngIf="name1?.errors?.required"> You must enter the product id</span>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPName">Product Name :</label>
+        <input type="text" class="form-control" id="exampleInputPName" name="pname"  placeholder="  product name" required #name2='ngModel'  minlength="3" ngModel>
+
+        <div class="alert alert-danger" *ngIf="!name2.valid">
+          <span *ngIf="name2?.errors?.required"> You must enter the product name</span>
+          <span *ngIf="name2?.errors?.minlength">You must enter atleast 3 characters</span>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPrice"> Price :</label>
+        <input type="number" class="form-control" id="exampleInputPrice" name="price"   placeholder=" price of this product" required #name3='ngModel'   ngModel>
+
+        <div class="alert alert-danger" *ngIf="!name3.valid">
+          <span *ngIf="name3?.errors?.required"> You must enter the price</span>
+        </div>
+
+      </div>
+      <button type="submit"  class="btn btn-success" [disabled]="!addproduct.valid" >Add Product</button>
+    </form>
+
+
+
+  </div>
+
+  <div class="col-md-2">
+
+  </div>
+
+
+
+</div>
+
+
+</div>
+
+
